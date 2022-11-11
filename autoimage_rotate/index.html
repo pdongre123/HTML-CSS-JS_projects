@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/autoimage_rotate/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla"
+      rel="stylesheet"
+    />
+    <title>Slide Image tutorial</title>
+  </head>
+
+  <body>
+    <div class="slider">
+      <p>Auto Image rotate using HTML, CSS and Javascript</p>
+      <div class="slides">
+        <input type="radio" name="radiot-btn" id="radio1" />
+        <input type="radio" name="radiot-btn" id="radio2" />
+        <input type="radio" name="radiot-btn" id="radio3" />
+        <input type="radio" name="radiot-btn" id="radio4" />
+        <div class="slide first">
+          <img src="assets/img1.jpg" alt="img1" />
+        </div>
+        <div class="slide">
+          <img src="assets/img2.jpg" alt="img2" />
+        </div>
+        <div class="slide">
+          <img src="assets/img3.jpg" alt="img3" />
+        </div>
+        <div class="slide">
+          <img src="assets/img4.jpg" alt="img4" />
+        </div>
+        <div class="slide">
+          <img src="assets/img5.jpg" alt="img5" />
+        </div>
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+      </div>
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var counter = 1;
+      setInterval(function () {
+        document.getElementById("radio" + counter).checked = true;
+        counter++;
+        if (counter > 4) {
+          counter = 1;
+        }
+      }, 5000);
+    </script>
+  </body>
+</html>

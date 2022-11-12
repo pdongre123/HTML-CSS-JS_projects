@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Search Bar using Javascript</title>
+  </head>
+  <body>
+    <section class="container">
+      <form>
+        <i class="fas fa-search"></i>
+        <input
+          type="text"
+          name=""
+          id="search-item"
+          placeholder="Search for products"
+          onkeyup="search()">
+      </form>
+
+      <div class="product-list" id="product-list">
+        <div class="product">
+          <img src="images/bag-1.jpeg" />
+          <div class="product-details">
+            <h2>HandBag</h2>
+            <h3>$30</h3>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/bag-2.jpeg" />
+          <div class="product-details">
+            <h2>HandBag</h2>
+            <h3>$30</h3>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/bag-3.jpeg" />
+          <div class="product-details">
+            <h2>HandBag</h2>
+            <h3>$30</h3>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/headphone-1.jpeg" />
+          <div class="product-details">
+            <h2>Headphones</h2>
+            <h3>$10</h3>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/headphone-2.jpeg" />
+          <div class="product-details">
+            <h2>Headphones</h2>
+            <h3>$10</h3>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/headphone-3.jpeg" />
+          <div class="product-details">
+            <h2>Headphones</h2>
+            <h3>$10</h3>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/jeans-1.jpeg" />
+          <div class="product-details">
+            <h2>Jeans</h2>
+            <h3>$50</h3>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/jeans-2.jpeg" />
+          <div class="product-details">
+            <h2>Jeans</h2>
+            <h3>$50</h3>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/t-shirt-1.jpeg" />
+          <div class="product-details">
+            <h2>T-shirt</h2>
+            <h3>$30</h3>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/t-shirt-2.jpeg" />
+          <div class="product-details">
+            <h2>T-shirt</h2>
+            <h3>$30</h3>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/shirt-1.jpeg" />
+          <div class="product-details">
+            <h2>Shirt</h2>
+            <h3>$40</h3>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/shirt-2.jpeg" />
+          <div class="product-details">
+            <h2>Shirt</h2>
+            <h3>$30</h3>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/dress-1.jpeg" />
+          <div class="product-details">
+            <h2>Dress</h2>
+            <h3>$20</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

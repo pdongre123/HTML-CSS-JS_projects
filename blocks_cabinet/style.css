@@ -1,0 +1,96 @@
+:root {
+  --shelf-height: 2;
+  --shelf-width: 2;
+}
+
+.booksparent {
+  width: 40vw;
+  border: solid #ba9166 1vh;
+  display: grid;
+  box-shadow: inset 0 0 7vw black;
+  border-radius: 2vw;
+  grid-template-rows: repeat(
+    calc(var(--shelf-height) * var(--shelf-height)),
+    1fr
+  );
+  background: #855a3b;
+  overflow: hidden;
+}
+
+.shelf {
+  border: solid #ba9166 1.5vh;
+  display: grid;
+  grid-row: span var(--shelf-height);
+  grid-template-rows: subgrid;
+}
+
+.subshelf {
+  border: solid #ba9166 1.5vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0;
+}
+
+.book {
+  width: calc(100% - 2px);
+  margin-top: 2vh;
+  border: solid 1px #111;
+  border-radius: 1vh;
+  align-self: end;
+}
+
+.book::after {
+  content: "";
+  display: block;
+  width: 2.5vw;
+  height: 0.5vh;
+  margin-left: 0.5vw;
+  margin-top: 3vh;
+  background: #f1f2f3;
+  box-shadow: 0 1vh 0px #ddd;
+}
+
+.book:hover {
+  cursor: pointer;
+  filter: hue-rotate(-15deg);
+  transform: translate(0, -1vh);
+  border-color: #0000aa;
+  box-shadow: 0 1vw 1vw rgba(0, 0, 0, 0.7);
+}
+
+.red {
+  background: #48394f;
+  height: 15vh;
+}
+
+.blue {
+  background: #7f3703;
+  height: 10vh;
+}
+
+.green {
+  height: 17vh;
+  background: #7a7af3;
+}
+
+.help {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 20vw;
+  padding: 1vw;
+  background: #eee;
+  border: solid 1px #ccc;
+  border-radius: 2vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.help button {
+  width: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 0.9em;
+}

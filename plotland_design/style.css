@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-expand-lg {
+  background-color: #ffffff;
+}
+.navbar-brand{
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: 800;
+}
+.navbar-nav{
+    font-weight: 700;
+}
+.left-side{
+   color: #78C0E0;
+}
+.text-section{
+    background-color: #78C0E0;
+}
+.hero-section{
+  background-image: url("./images/hero-img.jpg");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.display-2{
+    font-weight: 400;
+    color: #ffffff;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -100%);
+}
+.lead{
+    font-weight: 400;
+    color: #ffffff;
+    /* transform: translate(30%, 30%); */
+    /* top: 50%; */
+    text-align: left;
+    position: relative;
+    margin-right: 15px;
+    margin-bottom: 250px;
+}
+
+.btn-special{
+color: #ffffff;
+background-color: #78C0E0;
+border: 2px solid #78C0E0;
+  border-radius: 10px;
+  margin-top: -350px;
+}
+
+.right-side{
+    margin-left: 900px;
+    margin-top: -200px !important;
+    color: #ffffff;
+}
+
+
+.overview{
+    background-image: linear-gradient(#78c0e0, #ffffff);
+}
+.h2-section{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.h5-section{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.life{
+    background-image: url("./images/pathways.jpg");
+}
+.dot {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  display: inline-block;
+  border-style: dotted;
+  color: aqua;
+}
+.map-img {
+  height: 550px;
+  width: 550px;
+}
+.construction-map {
+  height: 550px;
+  width: 550px;
+}
+.pathways-img {
+  height: 550px;
+  width: 550px;
+}
+
+

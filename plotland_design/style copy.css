@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-expand-lg {
+  background-color: #ffffff;
+}
+.navbar-brand {
+  text-transform: uppercase;
+  font-size: large;
+  font-weight: 800;
+}
+.navbar-nav {
+  font-weight: 700;
+}
+.left-side {
+  color: #78c0e0;
+}
+.text-section {
+  /* background: linear-gradient(#4FA8C8,#C2F3F2); */
+  background: linear-gradient(#ffffff, #c2f3f2);
+}
+.text-area {
+  text-align: left;
+  font-size: small;
+}
+.hero-section {
+  background-image: url("./images/hero-section.png");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.display-2 {
+  font-size: xx-large;
+  color: #ffffff;
+  text-align: left;
+  top: 20%;
+  position: absolute !important;
+}
+.subtitle {
+  font-size: 17px;
+  color: #ffffff;
+  margin-bottom: 150px !important;
+  margin-top: 500px;
+}
+
+/* .lead {
+  font-weight: 400;
+  color: #ffffff;
+  text-align: left;
+  margin-right: 30px;
+  margin-top: 500px;
+} */
+
+.subtext {
+  font-size: 17px;
+}
+
+.btn-special {
+  color: #ffffff;
+  background-color: #4fa8c8;
+  border: 2px solid #4fa8c8;
+  border-radius: 10px;
+  margin-top: 120px !important;
+}
+
+.right-side {
+  margin-left: 900px;
+  margin-top: -200px !important;
+  color: #000000;
+}
+
+.overview {
+  height: 100vh;
+  width: 100%;
+}
+.h2-section {
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: left;
+}
+
+.h5-section {
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: left;
+}
+.btn-download {
+  color: #4fa8c8;
+  background-color: #ffffff;
+}
+.btn-enquire {
+  background-color: #4fa8c8;
+}
+
+#amenities{
+    background: linear-gradient(#4FA8C8,#C2F3F2);
+}
+.h1-section{
+    text-transform: uppercase;
+}
+.h3-section{
+  text-transform: uppercase;
+  font-size: larger;
+}
+.text-left{
+    background-image: url("./images/roadway.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.map-img {
+  height: 550px;
+  width: 550px;
+}
+.construction-map {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 80%;
+}
+.pathways-img {
+  height: 550px;
+  width: 550px;
+}
+
+.list-group-flush{
+    font-size: medium;
+    /* padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px; */
+}
+#location{
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+}
+.list-icons{
+width: 100%;
+overflow: hidden;
+}
+.list-icons ul{
+  padding: 0px;
+  margin: 0px;
+}
+.list-icons ul li{
+  list-style: none;
+  float: left;
+  width: 16.5%;
+  height: 95px;
+  background: #78c0e0;
+  margin: 2px 0px 0px 2px;
+  box-sizing: border-box;
+}
+.list-icons ul li:hover{
+  opacity: 0.9;
+}
+#first-row{
+text-align: center;
+margin-top: 20px;
+}
+.amenities-section{
+  text-transform: uppercase;
+}
+.light-color-box {
+  background: #A6D7E8 !important;
+  /* padding:20px 20px 20px 20px;E8F8F8 */
+}
+.dark-color-box{
+  background: #e8f8f8 !important;
+}
+#about{
+  background: #E8F8F8;
+}
+#masterplan{
+  background: #E8F8F8;
+}
+.dot {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  display: inline-block;
+}

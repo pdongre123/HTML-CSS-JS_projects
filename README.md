@@ -8,9 +8,17 @@ Copyright (c) 2023 coding_subway
 
 
 codepen:(https://codepen.io/coding_subway)
+
+
 youtube:(https://www.youtube.com/channel/UCf7PK7XyGnWtFqfkpgmIo6A)
+
+
 instagram:(https://www.instagram.com/coding_subway/?igshid=YmMyMTA2M2Y%3D)
+
+
 facebook:(https://www.facebook.com/profile.php?id=100087576140150)
+
+
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

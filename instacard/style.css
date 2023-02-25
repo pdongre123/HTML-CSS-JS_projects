@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dosis&family=Noto+Sans+Lao+Looped&family=Inter:wght@100&family=Oswald:wght@200&family=Pacifico&family=Poor+Story&family=Roboto+Slab&family=Titillium+Web:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(206, 206, 206);
+}
+main {
+  height: 45rem;
+  width: 35rem;
+  border-radius: 2rem;
+  transition: all 0.1s linear;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main:hover {
+  box-shadow: 0 0 20px 1px rgb(159, 159, 159);
+}
+
+main .circle {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  transition: all 0.5s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story {
+  border: none;
+  height: 11rem;
+  width: 11rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s linear;
+  border-radius: 50%;
+}
+
+.circle img {
+  height: 10rem;
+  width: 10rem;
+  transition: all 0.4s linear;
+}
+
+main:hover .circle .story {
+  border: 2.5px solid var(--col1);
+  transform: translateY(-13rem);
+}
+
+main .circle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  clip-path: circle(55px at center);
+  transition: all 0.5s linear;
+  overflow: hidden;
+}
+main:hover .circle::before {
+  clip-path: circle(400px at center);
+}
+
+.content {
+  align-self: flex-end;
+  height: 0rem;
+  width: 0rem;
+  transition: all 0.3s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+main:hover .content {
+  height: 28rem;
+  width: 50rem;
+  z-index: 2;
+}
+.profile_name {
+  font-size: 0rem;
+}
+main:hover .profile_name {
+  font-size: 3.5rem;
+  font-family: "Titillium Web", sans-serif;
+  transform: translateX(-1.1rem);
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+}
+main:hover .blue-tick {
+  position: absolute;
+  background: url("blur-tick.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 4.5rem;
+  width: 4.5rem;
+}
+
+main:hover .followers-section {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.follower {
+  font-size: 0rem;
+}
+main:hover .follower {
+  color: rgb(49, 49, 49);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 10rem;
+  z-index: 2;
+  font-size: 1.2rem;
+  font-family: "Noto Sans Lao Looped", sans-serif;
+}
+
+.follower b {
+  color: rgb(0, 0, 0);
+}
+
+main:hover .contact-section {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact {
+  display: none;
+}
+main:hover .contact {
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-family: "Noto Sans Lao Looped", sans-serif;
+}
+
+main:hover .contact:nth-child(1) {
+  background-color: white;
+  border: 0.5px solid var(--border);
+  width: 7rem;
+  height: 3rem;
+}
+main:hover .contact:nth-child(2) {
+  background-color: #458eff;
+  color: rgb(255, 255, 255);
+  width: 9rem;
+  height: 3rem;
+}
+main:hover .contact:nth-child(3) {
+  background-color: #458eff;
+  color: rgb(255, 255, 255);
+  width: 4rem;
+  height: 3rem;
+}
+
+main:hover .darkmode-btn {
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

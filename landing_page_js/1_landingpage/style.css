@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* background-color: #8BAAAD; */
+}
+body {
+  margin: 0;
+  padding: 0 4px;
+  height: 100vh;
+  overflow: hidden;
+  line-height: 1.5;
+  font-family: "Inconsolata", sans-serif;
+  font-size: 90.5%;
+  color: #fff;
+  background-color: #1d1e22;
+}
+.navbar ul {
+  /* display: flex; */
+  list-style-type: none;
+  padding: 0;
+  margin: 1em 0;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar ul li {
+  position: relative;
+  margin: 0 1em;
+  transition: all 0.2s linear;
+} /*ctx.fillText(deathMeans, cnv.width/2, cnv.height/2-30);ctx.fillText(deathMeans, cnv.width/2, cnv.height/2-30);ctx.fillText(deathMeans, cnv.width/2, cnv.height/2-30);ctx.fillText(deathMeans, cnv.width/2, cnv.height/2-30);ctx.fillText(deathMeans, cnv.width/2, cnv.height/2-30);ctx.fillText(deathMeans, cnv.width/2, cnv.height/2-30);*/
+.navbar ul li a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #fff;
+}
+.navbar ul li:before {
+  position: absolute;
+  content: "";
+  top: calc(100% + 4px);
+  left: 0;
+  width: 20px;
+  height: 2px;
+  /*ctx.fillText(deathMeans, cnv.width/2, cnv.height/2-30);ctx.fillText(deathMeans, cnv.width/2, cnv.height/2-30);ctx.fillText(deathMeans, cnv.width/2, cnv.height/2-30);ctx.fillText(deathMeans, cnv.width/2, cnv.height/2-30);ctx.fillText(deathMeans, cnv.width/2, cnv.height/2-30);ctx.fillText(deathMeans, cnv.width/2, cnv.height/2-30);*/
+  background-color: #fff;
+  transform-origin: 0 100%;
+  transform: rotate(-5deg);
+  transition: all 0.2s ease-out;
+}
+.navbar ul li:hover::before {
+  width: 100%;
+  background-color: #df2359;
+}

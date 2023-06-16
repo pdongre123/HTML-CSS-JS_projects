@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    background-color: #000;
+    background-image: radial-gradient(circle at 100% 100%, #088, #80f8, transparent 100vmin), radial-gradient(circle at 0% 0%, #80f, #f084, transparent 100vmin);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    font-size: .7vmin;
+    overflow: hidden;
+  }
+  
+  .scene {
+    place-self: center;
+    width: 100em;
+    aspect-ratio: 1;
+    display: grid;
+    perspective: 200em;
+  }
+  
+  .scene, .scene * {
+    position: absolute;
+    transform-style: preserve-3d;
+  }
+  
+  .sphere, .slice {
+    inset: 0;
+  }
+  
+  .sphere {
+    transition: transform .3s ease-in-out;
+  }
+  
+  @keyframes spin {
+    0% {
+  
+    }
+    100% {
+      transform: rotateY(1080deg) rotateX(360deg);
+    }
+  }
+  
+  .slice {
+    --ngon: 16;
+    --angle: calc(360deg/var(--ngon));
+    display: grid;
+    place-items: center;
+    scale: calc(cos(var(--angle)/2)) 1;
+    rotate: y calc(var(--sliceStep)*var(--angle));
+  }
+  
+  .facet, .lid, .lid::before {
+    aspect-ratio: 1;
+  }
+  
+  .lid {
+    width: calc(100em*sin(var(--angle))*cos(var(--angle)/2));
+    transform: rotateX(calc(90deg*var(--dir))) translateZ(calc(50em*cos(var(--angle)))); 
+  }
+  
+  .lid, .lid::before, .lid::after {
+    background-image: radial-gradient(#0004 60%, gold 0, brown, orange, white 71%, transparent 0);
+  }
+  
+  .lid::before, .lid::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  
+  .lid::before {
+    transform: translateZ(5px);
+  }
+  
+  .lid::after {
+    transform: translateZ(2.5px);
+  }
+  
+  .facet {
+    width: calc(100em*sin(var(--angle)/2));
+    transform: rotate(calc(var(--facetStep)*var(--angle) - 90deg + var(--angle)/2)) translateX(calc(50em*cos(var(--angle)/2) - .15em)) rotateY(90deg);
+    --gradY: calc(100%*sin(var(--angle)*var(--facetStep))/(sin(var(--angle)*var(--facetStep)) + sin(var(--angle)*(var(--facetStep) + 1))));
+    --gradAngle: atan((sin(var(--angle)*var(--facetStep)) + sin(var(--angle)*(var(--facetStep) + 1)))/2);
+    background-image: repeating-conic-gradient(
+      from calc(-1*var(--gradAngle)) at 50% var(--gradY),
+      #b06 0, #303 calc(var(--gradAngle) - 0deg) calc(var(--gradAngle) + 20deg), #60b calc(2*var(--gradAngle)),
+      #066 0,#011 calc(90deg + var(--gradAngle) - 0deg) calc(90deg + var(--gradAngle) + 20deg),#050 180deg
+    );
+    clip-path: polygon(
+      calc(50%*(1 - sin(var(--angle)*var(--facetStep)))) 0,
+      calc(50%*(1 + sin(var(--angle)*var(--facetStep)))) 0,
+      calc(50%*(1 + sin(var(--angle)*(var(--facetStep) + 1)))) 100%,
+      calc(50%*(1 - sin(var(--angle)*(var(--facetStep) + 1)))) 100%
+    )
+  }
+  
+  .box {
+    position: relative;
+    width: 10vw;
+    height: 10vh;
+    display: inline;
+    z-index: 1;
+  }
+  
+  .col1:hover ~ .scene {
+    --colStep: 0;
+  }
+  
+  .col2:hover ~ .scene {
+    --colStep: 1;
+  }
+  
+  .col3:hover ~ .scene {
+    --colStep: 2;
+  }
+  
+  .col4:hover ~ .scene {
+    --colStep: 3;
+  }
+  
+  .col5:hover ~ .scene {
+    --colStep: 4;
+  }
+  
+  .col6:hover ~ .scene {
+    --colStep: 5;
+  }
+  
+  .col7:hover ~ .scene {
+    --colStep: 6;
+  }
+  
+  .col8:hover ~ .scene {
+    --colStep: 7;
+  }
+  
+  .col9:hover ~ .scene {
+    --colStep: 8;
+  }
+  
+  .col10:hover ~ .scene {
+    --colStep: 9;
+  }
+  
+  .box1:hover ~ .scene {
+    --boxStep: 0;
+  }
+  
+  .box2:hover ~ .scene {
+    --boxStep: 1;
+  }
+  
+  .box3:hover ~ .scene {
+    --boxStep: 2;
+  }
+  
+  .box4:hover ~ .scene {
+    --boxStep: 3;
+  }
+  
+  .box5:hover ~ .scene {
+    --boxStep: 4;
+  }
+  
+  .box6:hover ~ .scene {
+    --boxStep: 5;
+  }
+  
+  .box7:hover ~ .scene {
+    --boxStep: 6;
+  }
+  
+  .box8:hover ~ .scene {
+    --boxStep: 7;
+  }
+  
+  .box9:hover ~ .scene {
+    --boxStep: 8;
+  }
+  
+  .box10:hover ~ .scene {
+    --boxStep: 9;
+  }
+  
+  .box:hover ~ .scene .sphere {
+    transform: rotateX(calc(var(--colStep)*-18deg)) rotate(calc(var(--boxStep)*36deg));
+  }
+  
+  
+  
+  .slice:nth-child(1) {
+    --sliceStep: 0;
+  }
+  .slice:nth-child(2) {
+    --sliceStep: 1;
+  }
+  .slice:nth-child(3) {
+    --sliceStep: 2;
+  }
+  .slice:nth-child(4) {
+    --sliceStep: 3;
+  }
+  .slice:nth-child(5) {
+    --sliceStep: 4;
+  }
+  .slice:nth-child(6) {
+    --sliceStep: 5;
+  }
+  .slice:nth-child(7) {
+    --sliceStep: 6;
+  }
+  .slice:nth-child(8) {
+    --sliceStep: 7;
+  }
+  .slice:nth-child(9) {
+    --sliceStep: 8;
+  }
+  .slice:nth-child(10) {
+    --sliceStep: 9;
+  }
+  .slice:nth-child(11) {
+    --sliceStep: 10;
+  }
+  .slice:nth-child(12) {
+    --sliceStep: 11;
+  }
+  .slice:nth-child(13) {
+    --sliceStep: 12;
+  }
+  .slice:nth-child(14) {
+    --sliceStep: 13;
+  }
+  .slice:nth-child(15) {
+    --sliceStep: 14;
+  }
+  .slice:nth-child(16) {
+    --sliceStep: 15;
+  }
+  
+  .facet:nth-child(1) {
+    --facetStep: 1;
+  }
+  .facet:nth-child(2) {
+    --facetStep: 2;
+  }
+  .facet:nth-child(3) {
+    --facetStep: 3;
+  }
+  .facet:nth-child(4) {
+    --facetStep: 4;
+  }
+  .facet:nth-child(5) {
+    --facetStep: 5;
+  }
+  .facet:nth-child(6) {
+    --facetStep: 6;
+  }
+  
+  .lid:nth-child(odd) {
+    --dir: 1;
+  }
+  
+  .lid:nth-child(2n) {
+    --dir: -1;
+  }
+  

@@ -1,0 +1,71 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      background-color: gainsboro; 
+  }
+  
+  #mainImg {
+      display: none;
+  }
+  
+  .image-wrapper {
+      /* 	ensure positive values */
+      --absx: max(var(--ix), -1*var(--ix));
+      --absy: max(var(--iy), -1*var(--iy));
+      position: relative;
+      width: 50vmin;
+      height: 50vmin;
+      margin: 0;
+  }
+  
+  .image-wrapper.mouseout span {
+      transition: 
+          background-color 180ms ease-out,
+          translate 180ms ease-in,
+          blur 180ms ease-in;
+  }
+  
+  span {
+      --blur: calc(((var(--absx) + var(--absy)) * var(--mod)) / 1000 * 1px);
+      position: absolute;
+    display: block;
+      width: 100%;
+      height: 100%;
+      background-color: hsl(calc(var(--r) + var(--hm)), 100%, 50%);
+      mix-blend-mode: overlay;
+      border-radius: 999em;
+      overflow: hidden;
+      filter: blur(var(--blur));
+      translate: 
+          calc(var(--ix) * (var(--mod) * 0.001%))
+          calc(var(--iy) * (var(--mod) * 0.001%));
+  }
+  
+  span::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      display: block;
+      background-image: var(--src);
+      background-size: 100%;
+      background-position: center;
+      mix-blend-mode: multiply;
+  }
+  
+  .red {
+      --r: 0;
+      --mod: 1;
+  }
+  
+  .blue {
+      --r: 240;
+      --mod: 3;
+  }
+  
+  .green {
+      --mod: 5;
+      --r: 120;
+  }
